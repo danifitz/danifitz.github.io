@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
-title: Daniel Fitzgerald
+title: daniel fitzgerald
 description: blog, cv and other stuff
 permalink: /archive/:year/:month/:day/:title
 gems:
