@@ -5,10 +5,10 @@ layout: feed
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>Daniel Fitzgerald</title>
-	<link href="http://danielfitzgerald.co.uk/blog/atom.xml" rel="self"/>
-	<link href="http://danielfitzgerald.co.uk/blog"/>
+	<link href="http://danielfitzgerald.co.uk/archive/atom.xml" rel="self"/>
+	<link href="http://danielfitzgerald.co.uk/archive"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://danielfitzgerald.co.uk/blog</id>
+	<id>http://danielfitzgerald.co.uk/archive</id>
 	<author>
 		<name>Daniel Fitzgerald</name>
 		<email>danfitzgerald90@gmail.com</email>
