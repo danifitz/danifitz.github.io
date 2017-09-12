@@ -4,7 +4,7 @@ title: "How to use Emoji's in GitHub Pages/Jekyll Blogs"
 date: 2017-09-12
 ---
 
-[soundcloud 341899794]
+<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/341899794&amp;color=00aabb&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
 🌍🌍🌍 Cool and Cozzy mix 🌍🌍🌍
 
