@@ -49,7 +49,7 @@ and run them. This sets the context of `kubectl` to point to the ICp cluster.
 for `kubernetes-dashboard` by running
 
 ```bash
-kubectl create -f https://git.io/kube-dashboard
+$ kubectl create -f https://git.io/kube-dashboard
 ```
 3. Go and grab a cup of coffee while the image is downloaded and the container
 is created. If your cluster has a decent network connection you might only
@@ -57,12 +57,12 @@ have to wait 30 seconds or so. You can check on it's progress by monitoring the
 status of pods in the `kube-system` namespace by running
 
 ```bash
-kubectl get pods --namespace kube-system
+$ kubectl get pods --namespace kube-system
 ```
 4. Back from your coffee and suitably refreshed, you're ready to open up the dashboard.
 
 ```bash
-kubectl proxy
+$ kubectl proxy
 ```
 5. Open a browser to `http://127.0.0.1:8001/ui`
 
