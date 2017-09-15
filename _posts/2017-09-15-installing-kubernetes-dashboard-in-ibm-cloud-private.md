@@ -13,7 +13,7 @@ developments.
 I've been playing around with the new 2.1beta image on my laptop
 using Vagrant and I went to spin up a Kubernetes dashboard to check
 on some metrics of my cluster. I found the following message when I
-opened by browser
+opened my browser
 
 ```
 {
