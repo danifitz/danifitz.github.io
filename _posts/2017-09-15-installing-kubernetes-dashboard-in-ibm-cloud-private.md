@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Installing the Kubernetes dashboard in IBM Cloud private"
-date: 2017-09-12
+date: 2017-09-15
 ---
 
 IBM Cloud private is a relatively new project from IBM which will
