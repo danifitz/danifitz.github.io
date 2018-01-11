@@ -56,9 +56,6 @@ Once you're in, we need to create a `mount` file that describes the NFS mount an
 2. Make a new file with the same filename as the directory you wish to mount. For example if I wanted
 to mount my NFS storage at `/home/data` then I would create a file called `home-data.mount`.
 
-`touch home-data.mount`
-`vi home-data.mount`
-
 ```
 [Unit]
 Description = Mount for NFS storage for ICP PersistentVolume
