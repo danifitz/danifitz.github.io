@@ -10,17 +10,17 @@ Because of the ephemeral nature of Containers, the filesystem inside the contain
 
 One of the storage options which is supported by IBM Cloud Private is NFS. We can create a Persistent Volume to make some NFS storage available to our Kubernetes cluster and then when we deploy an application, it can make a [Persistent Volume Claim](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) to claim and use that storage.
 
-## Pre-requisites
+### Pre-requisites
 1. IBM Cloud account, sign up for free [here](https://www.ibm.com/cloud/)
 2. IBM Cloud Private cluster, running on IBM Cloud Infrastructure. Get one [here](https://github.com/IBM/deploy-ibm-cloud-private/blob/master/docs/deploy-softlayer-terraform.md)
 
-## Steps we're going to take:
+### Steps we're going to take:
 1. Order a File Storage volume from the IBM Cloud Infrastructure portal
 2. Mount the NFS storage on our server
 3. Create a `PersistentVolume` in IBM Cloud Private
 4. Create a `PersistentVolumeClaim` in our application's deployment YAML configuration
 
-## Order File Storage
+### Order File Storage
 Go to the IBM Cloud console and expand the menu at the top left, select Infrastructure from the menu.
 
 On the right hand menu select Storage and then File Storage. Choose `Order File Storage`
@@ -36,7 +36,7 @@ that you wish to mount this NFS storage to the list of Authorised hosts.
 
 Also, note down the value of `Mount Point`, we'll use this value later when mounting the storage.
 
-## Mount the NFS storage on our server
+### Mount the NFS storage on our server
 
 I followed the guide [here](https://console.bluemix.net/docs/infrastructure/FileStorage/mounting-nsf-file-storage.html#mounting-nfs-file-storage) to do this but I've distilled it below.
 
@@ -77,7 +77,7 @@ Now enable the mount by running `systemctl enable --now /etc/systemd/system/home
 
 You should be able to verify the success by running `mount | grep home`
 
-## Create a `PersistentVolume` in IBM Cloud Private
+### Create a `PersistentVolume` in IBM Cloud Private
 
 Official documentation on creating Persistent Volumes is [here](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_2.1.0/manage_cluster/create_nfs.html)
 
@@ -104,7 +104,7 @@ Parameters:
   value: YOUR_NFS_MOUNT_PATH i.e /home/data  
 ```
 
-## Create a PersistentVolumeClaim in our application's deployment YAML configuration
+### Create a PersistentVolumeClaim in our application's deployment YAML configuration
 
 Now we can create a `PersistentVolumeClaim` in our applications YAML deployment configuration
 so that we can dynamically claim the `PersistentVolume` when we deploy our application.
@@ -149,7 +149,7 @@ spec:
         claimName: myclaim
 ```
 
-## Pro-tip
+### Pro-tip
 In Kubernetes, a `PersistentVolume` can only have one `PersistentVolumeClaim` at any one time. To avoid
 having to have loads of NFS File Storage volumes, you can create sub-directories in your mount path once
 you've mounted the storage. For example
@@ -163,6 +163,6 @@ you've mounted the storage. For example
   
 This will allow us to create multiple `PersistentVolume` per NFS volume.
 
-## Summary
+### Summary
   
 So we've created a new NFS File Storage Volume, mounted it to a server, created a `PersistentVolume` in IBM Cloud Private and I've demonstrated how you can claim this storage in your app's deployment config.
