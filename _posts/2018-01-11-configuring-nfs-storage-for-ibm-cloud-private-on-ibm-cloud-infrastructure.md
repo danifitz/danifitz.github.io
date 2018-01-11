@@ -86,6 +86,7 @@ Now log into your IBM Cloud Private console and go to Platform > Storage. Click 
 Fill out the template to create your `PersistentVolume`. Below is how I filled out the template
 ![creating a persistentvolume]({{ site.url }}/assets/nfs/persistent-volume.png)
 
+```
 General:
   Name: my-pv
   Storage class name:
@@ -101,6 +102,7 @@ Parameters:
   value: HOST_OR_IP_ADDRESS_OF_NFS_SERVER
   key: path
   value: YOUR_NFS_MOUNT_PATH i.e /home/data  
+```
 
 ## Create a `PersistentVolumeClaim` in our application's deployment YAML configuration
 
