@@ -104,7 +104,7 @@ Parameters:
   value: YOUR_NFS_MOUNT_PATH i.e /home/data  
 ```
 
-## Create a `PersistentVolumeClaim` in our application's deployment YAML configuration
+## Create a PersistentVolumeClaim in our application's deployment YAML configuration
 
 Now we can create a `PersistentVolumeClaim` in our applications YAML deployment configuration
 so that we can dynamically claim the `PersistentVolume` when we deploy our application.
