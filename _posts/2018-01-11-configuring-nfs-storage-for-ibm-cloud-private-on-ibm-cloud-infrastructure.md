@@ -154,10 +154,12 @@ In Kubernetes, a `PersistentVolume` can only have one `PersistentVolumeClaim` at
 having to have loads of NFS File Storage volumes, you can create sub-directories in your mount path once
 you've mounted the storage. For example
 
+```
 /home/data
   /db1
   /db2
   /db2
+```
   
 This will allow us to create multiple `PersistentVolume` per NFS volume.
 
