@@ -19,7 +19,7 @@ there are a few things you can do.
 2. Press the cog icon on the top right to open *Settings*
 3. Open the *Playback* menu
 4. Under *Volume Level* choose *Quiet (preserves dynamics)*. This option means
-the Spotify app doesn't apply (compression)[https://en.wikipedia.org/wiki/Dynamic_range_compression]
+the Spotify app doesn't apply [compression](https://en.wikipedia.org/wiki/Dynamic_range_compression)
 to the tracks which means there will be a greater difference in volume between
 tracks of differing volume. Essentially, you're listening to the music with
 dynamic range left as it was intended to be listened to.

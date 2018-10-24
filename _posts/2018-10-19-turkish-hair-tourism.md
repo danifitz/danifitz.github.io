@@ -18,7 +18,7 @@ Photo credit: [Medicalopedia](https://www.medicalopedia.org/)
 I did a bit of digging online and it seems there are over 350 clinics for this
 procedure in Istanbul alone! In the Sabiha airport on my way home I saw women
 in various stages of nose job recovery too. There's an
-(article on the BBC)[https://www.bbc.co.uk/bbcthree/article/758f9f1f-e8b6-4a97-8046-b0888e610edd]
+[article on the BBC](https://www.bbc.co.uk/bbcthree/article/758f9f1f-e8b6-4a97-8046-b0888e610edd)
 about this if you're interested to hear more about this interesting trend.
 
 Anyway I'll be taking a trip back there soon for botox, lip enhancements and
