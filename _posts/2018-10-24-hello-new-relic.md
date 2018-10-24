@@ -6,9 +6,9 @@ date: 2018-10-24
 
 ![New Relic logo]({{ site.url }}/assets/newrelic/NewRelic-logo-bug.png)
 
-This week I started a new job working an awesome company called New Relic.
-I'm really excited by this new role and working for a fast-growing company
-with an awesome culture.
+This week I started a new job working for a company called New Relic.
+I'm really excited by this new role at a fast-growing company with an awesome
+culture.
 
 I've joined the Solution Consultant team where I will be working with clients
 across EMEA to discover, learn and be successful with the New Relic platform. In
