@@ -13,6 +13,7 @@ looking patches on their head. I soon realised the raw, bloody patch on their
 heads where new fresh hair occupied was the result of hair transplant surgery.
 
 ![1 day after a hair transplant, ouch that looks painful]({{ site.url }}/assets/turkey-hair/1-day-after-hair-transplant.jpg)
+Photo credit: [Medicalopedia](https://www.medicalopedia.org/)
 
 I did a bit of digging online and it seems there are over 350 clinics for this
 procedure in Istanbul alone! In the Sabiha airport on my way home I saw women
