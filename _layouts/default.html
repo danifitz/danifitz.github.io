@@ -92,7 +92,15 @@
         // Use a regular expression to see if the file extension matches common image types
         if(resourceExtension.match(/^(.jpg|.png|.gif|.svf|.tif)$/)) {
             console.log('-> Sending NR custom Image Resource Timing ->', arrayIndex)
-            newrelic.addPageAction('imageResourceTiming', resource)
+            
+            // collect some attributes to send to New Relic
+            // there's a lot more available but this is MVP
+            let attributes = {}
+            attributes.duration = resource.duration
+            attributes.name = resource.name
+            attributes.transferSize = resource.transferSize
+
+            newrelic.addPageAction('imageResourceTiming', attributes)
         }
       })
     }
