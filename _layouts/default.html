@@ -85,9 +85,8 @@
     console.log('-> NR custom Image Resource Timing script loaded ->')
     if(window.performance === undefined) {
       console.log("-> NR custom Image Resource Timing script: performance NOT supported ->");
-      return;
-  } else {
-    window.performance.getEntriesByType('resource').forEach(function(resource) {
+    } else {
+      window.performance.getEntriesByType('resource').forEach(function(resource) {
         console.log('-> NR custom Image Resource Timing script loaded ->')
         let resourceExtension = resource.name.substring(resource.name.lastIndexOf('.'), resource.name.length + 1)
         
