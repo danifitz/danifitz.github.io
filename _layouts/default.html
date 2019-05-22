@@ -82,7 +82,7 @@
     </script>
   {% endif %}
   <script>
-    window.performance.getEntriesByType('resouerce').forEach(function(resource) {
+    window.performance.getEntriesByType('resource').forEach(function(resource) {
       console.log('-> NR custom Image Resource Timing script loaded ->')
       let resourceExtension = resource.name.substring(resource.name.lastIndexOf('.'), resource.name.length + 1)
       
