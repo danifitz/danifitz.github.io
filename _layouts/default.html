@@ -92,7 +92,7 @@
           !("getEntriesByType" in window.performance) ||
           !(window.performance.getEntriesByType("paint") instanceof Array)
         ) {
-            consoleLogger(logToConsole, "-> NR First Paint & Resource Timing script: performance NOT supported by Browser ->");
+            consoleLogger(logToConsole, "performance NOT supported by Browser");
         } 
         else 
         { 
@@ -102,7 +102,7 @@
                 to_seconds = 0;
                 to_seconds = performanceEntry.startTime / 1000;
                 newrelic.setCustomAttribute(performanceEntry.name, to_seconds);
-                consoleLogger(logToConsole,performanceEntry.name + " - seconds: " + to_seconds + ", milliseconds : " + performanceEntry.startTime);
+                consoleLogger(logToConsole, performanceEntry.name + " - seconds: " + to_seconds + ", milliseconds: " + performanceEntry.startTime);
               });
         }
       }
@@ -112,13 +112,13 @@
     function getResourceTimings() {
         // let's make sure the agent is present
         if(newrelic != undefined && typeof newrelic == 'object') {
-            consoleLogger(logToConsole, '-> NR First Paint & Resource Timing script: loaded ->')
+            consoleLogger(logToConsole, 'loaded')
             if(
                 !("performance" in window) ||
                 !("getEntriesByType" in window.performance) ||
                 !(window.performance.getEntriesByType('resource') instanceof Array)
             ) {
-                consoleLogger(logToConsole, "-> NR First Paint & Resource Timing script: performance NOT supported by Browser ->");
+                consoleLogger(logToConsole, "performance NOT supported by Browser");
             } else {
                 let performance = window.performance
                 let performanceEntries = performance.getEntriesByType('resource')
@@ -128,7 +128,7 @@
                     
                     // Measure JavaScript resource performance
                     if(resource.initiatorType == 'script') {
-                        consoleLogger(logToConsole, '-> Sending NR JS Resource Timing ->', arrayIndex)
+                        consoleLogger(logToConsole, 'sending NR JS Resource Timing' + arrayIndex)
                         
                         // collect some attributes to send to New Relic (all in Seconds)
                         var attributes = {}
@@ -142,7 +142,7 @@
 
                     // Measure Image resource performance
                     if(resource.initiatorType == 'img') {
-                        consoleLogger(logToConsole, '-> Sending NR Image Resource Timing ->', arrayIndex)
+                        consoleLogger(logToConsole, 'sending NR Image Resource Timing' + arrayIndex)
                         
                         // collect some attributes to send to New Relic
                         // there's a lot more available but this is MVP
@@ -158,7 +158,7 @@
 
                     // Measure CSS resource performance
                     if(resource.initiatorType == 'css') {
-                        consoleLogger(logToConsole, '-> Sending NR CSS Resource Timing ->', arrayIndex)
+                        consoleLogger(logToConsole, 'sending NR CSS Resource Timing' + arrayIndex)
 
                         // collect some attributes to send to New Relic
                         // there's a lot more available but this is MVP
@@ -186,7 +186,7 @@
           !(window.performance.getEntriesByType("resource") instanceof Array)
         ) 
         {
-          consoleLogger(logToConsole,"Unsupported Browser" );
+          consoleLogger(logToConsole, "performance NOT supported by Browser" );
         } 
         else 
         { 
@@ -242,18 +242,18 @@
                 newrelic.setCustomAttribute('budgetTotalOtherSize', other_all_size);
                 newrelic.setCustomAttribute('budgetCachedAssets', cache_count);
               }
-              consoleLogger(logToConsole,"Total Assets: " + assets + " | Total Assets Size: " + assets_all_size + "kB | ");
-              consoleLogger(logToConsole,"Total Images: " + image_count + " | Total Images Size: " + image_all_size + "kB | ");
-              consoleLogger(logToConsole,"Total Scripts: " + script_count + " | Total Scripts Size: "+ script_all_size + "kB | ");
-              consoleLogger(logToConsole,"Total Css: " + css_count + " | Total CSS Size: " + css_all_size + "kB | ");
-              consoleLogger(logToConsole,"Total Other: " + other_count + " | Total Other Size: " + other_all_size + "kB | ");
-              consoleLogger(logToConsole,"Cached Resources : " + cache_count + " | ");
+              consoleLogger(logToConsole,"Total Assets: " + assets + " | Total Assets Size: " + assets_all_size + "kB");
+              consoleLogger(logToConsole,"Total Images: " + image_count + " | Total Images Size: " + image_all_size + "kB");
+              consoleLogger(logToConsole,"Total Scripts: " + script_count + " | Total Scripts Size: "+ script_all_size + "kB");
+              consoleLogger(logToConsole,"Total Css: " + css_count + " | Total CSS Size: " + css_all_size + "kB");
+              consoleLogger(logToConsole,"Total Other: " + other_count + " | Total Other Size: " + other_all_size + "kB");
+              consoleLogger(logToConsole,"Cached Resources : " + cache_count);
         }
       }
 
 
     function consoleLogger(isLoggingOn, msg) {
-      if (isLoggingOn == 1) { console.log(msg); }
+      if (isLoggingOn == 1) { console.log('-> NR First Paint & Resource Timing script: ' + msg + '->'); }
     }
 
     window.addEventListener('load', function() {
@@ -263,7 +263,7 @@
         if(measureAssetBudgets) getAssetBudgets()
         var t1 = performance.now()
         var totalTime = (t1 - t0) / 1000;
-        consoleLogger("Overhead Of This Function: " + totalTime + "Seconds - It began at : " + t0 + " and ended at : " +t1)
+        consoleLogger("Overhead of this script: " + totalTime + "seconds - it began at : " + t0 + " and ended at : " +t1)
     })
   </script>
   </body>
