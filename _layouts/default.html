@@ -128,7 +128,7 @@
                     
                     // Measure JavaScript resource performance
                     if(resource.initiatorType == 'script') {
-                        consoleLogger(logToConsole, 'sending NR JS Resource Timing' + arrayIndex)
+                        consoleLogger(logToConsole, 'sending NR JS Resource Timing ' + arrayIndex)
                         
                         // collect some attributes to send to New Relic (all in Seconds)
                         var attributes = {}
@@ -142,7 +142,7 @@
 
                     // Measure Image resource performance
                     if(resource.initiatorType == 'img') {
-                        consoleLogger(logToConsole, 'sending NR Image Resource Timing' + arrayIndex)
+                        consoleLogger(logToConsole, 'sending NR Image Resource Timing ' + arrayIndex)
                         
                         // collect some attributes to send to New Relic
                         // there's a lot more available but this is MVP
@@ -158,7 +158,7 @@
 
                     // Measure CSS resource performance
                     if(resource.initiatorType == 'css') {
-                        consoleLogger(logToConsole, 'sending NR CSS Resource Timing' + arrayIndex)
+                        consoleLogger(logToConsole, 'sending NR CSS Resource Timing ' + arrayIndex)
 
                         // collect some attributes to send to New Relic
                         // there's a lot more available but this is MVP
@@ -253,7 +253,7 @@
 
 
     function consoleLogger(isLoggingOn, msg) {
-      if (isLoggingOn == 1) { console.log('-> NR First Paint & Resource Timing script: ' + msg + '->'); }
+      if (isLoggingOn == 1) { console.log('-> NR First Paint & Resource Timing script: ' + msg + ' ->'); }
     }
 
     window.addEventListener('load', function() {
