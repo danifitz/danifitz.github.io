@@ -84,7 +84,7 @@
   <script>
     // indicates if the script should log to the console
     const logToConsole = 1;
-    const getAssetBudgets = 1;
+    const measureAssetBudgets = 1;
 
     function getPaintTimings() {
         if (
@@ -260,7 +260,7 @@
         var t0 = performance.now()
         getPaintTimings()
         getResourceTimings()
-        if(getAssetBudgets) getAssetBudgets()
+        if(measureAssetBudgets) getAssetBudgets()
         var t1 = performance.now()
         var totalTime = (t1 - t0) / 1000;
         consoleLogger("Overhead Of This Function: " + totalTime + "Seconds - It began at : " + t0 + " and ended at : " +t1)
